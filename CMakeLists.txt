@@ -31,3 +31,9 @@ set(LIBGMOCK_LIBRARIES
 )
 set(LIBGMOCK_INCLUDE_DIR "${source_dir}/googlemock/include")
 set(LIBGTEST_INCLUDE_DIR "${source_dir}/googletest/include")
+
+gtest_add_tests(TARGET mocks)
+
+install(
+  FILES mocks.cpp DESTINATION include/cmakeproj
+)
